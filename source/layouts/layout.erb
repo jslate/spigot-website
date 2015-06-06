@@ -13,7 +13,20 @@
     <%= javascript_include_tag  "all" %>
   </head>
 
-  <body class="<%= page_classes %>">
+  <body class="<%= page_classes %>" style="background-color:black;">
+    
+    <ul class="navigation-bar">
+      <li class="navigation-bar-option">
+        <%= link_to "home", "index.html", class: (current_page.path == 'index.html') ? 'active' : '' %>
+      </li>
+      <li class="navigation-bar-option">
+        <%= link_to "about", "about.html", class: (current_page.path == 'about.html') ? 'active' : '' %>
+      </li>
+      <li class="navigation-bar-option">
+        <%= link_to "support", "support.html", class: (current_page.path == 'support.html') ? 'active' : '' %>
+      </li>
+    </ul>
+    
     <%= yield %>
   </body>
 </html>
