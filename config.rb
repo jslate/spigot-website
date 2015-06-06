@@ -53,11 +53,13 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
+puts ENV['HOME']
+
 activate :s3_sync do |s3_sync|
   s3_sync.bucket                     = 'net.slatefamily.spigot'
   s3_sync.region                     = 'us-east-1'
-  s3_sync.aws_access_key_id          = 'AKIAIJT4EGWEDQFOFPQA'
-  s3_sync.aws_secret_access_key      = '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'
+  s3_sync.aws_access_key_id          = ENV['AWS_KEY']
+  s3_sync.aws_secret_access_key      = ENV['AWS_SECRET']
 end
 
 # Build-specific configuration
