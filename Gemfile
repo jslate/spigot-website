@@ -15,3 +15,5 @@ gem "tzinfo-data", platforms: [:mswin, :mingw, :jruby]
 
 gem "middleman-s3_sync"
 gem "pry"
+
+gem 'sass'

@@ -15,17 +15,13 @@
 
   <body class="<%= page_classes %>" style="background-color:black;">
     
-    <ul class="navigation-bar">
-      <li class="navigation-bar-option">
-        <%= link_to "home", "index.html", class: (current_page.path == 'index.html') ? 'active' : '' %>
-      </li>
-      <li class="navigation-bar-option">
-        <%= link_to "about", "about.html", class: (current_page.path == 'about.html') ? 'active' : '' %>
-      </li>
-      <li class="navigation-bar-option">
-        <%= link_to "support", "support.html", class: (current_page.path == 'support.html') ? 'active' : '' %>
-      </li>
-    </ul>
+    <div class="navigation-bar">
+      <%- [['index.html', 'home'], ['about.html', 'about'], ['support.html', 'support']].each do |page| %>
+        <%- link_to(page[0], class: current_page.path == page[0] ? 'active' : '') do %>
+          <%= page[1] %>
+        <%- end %>
+      <%- end %>
+    </div>
     
     <%= yield %>
   </body>

@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+.title {
+  color: #666666;
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: -3px;
+  text-align: center;
+  padding: 5px;
+  margin: 0; }
+
+.navigation-bar {
+  margin: 0px;
+  padding: 10px 0 0 0;
+  float: left;
+  position: absolute;
+  a {
+    border-radius: 10px;
+    background-color: #333333;
+    color: #ffffff;
+    padding: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    &.active {
+      background-color: #777777;
+      color: #000000;
+    }
+  }
+}
+
+.news {
+  color: white;
+  float: left;
+  font-size: 20px;
+}
+
+.subtitle {
+  color: #aaaaaa;
+  font-size: 30px;
+}
+
+.tutorial {
+  float: right;
+  width: 560px;
+  height: 315px;
+}
