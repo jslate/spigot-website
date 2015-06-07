@@ -11,7 +11,7 @@
 
 .navigation-bar {
   margin: 0px;
-  padding: 10px 0 0 0;
+  padding: 10px 0 0 20px;
   float: left;
   position: absolute;
   a {
@@ -21,6 +21,9 @@
     padding: 20px;
     font-size: 20px;
     text-decoration: none;
+    &:hover {
+      background-color: #555555;
+    }
     &.active {
       background-color: #777777;
       color: #000000;
@@ -28,20 +31,22 @@
   }
 }
 
-.news {
+.body-text {
   color: white;
   float: left;
   font-size: 20px;
+  margin: 10px;
 }
 
 .subtitle {
   color: #aaaaaa;
   font-size: 30px;
+  margin: 10px;
 }
 
 .tutorial {
   float: right;
   width: 560px;
   height: 315px;
-  margin: 0 40px 0 30px;
+  margin: 0 40px 0 3  0px;
 }
